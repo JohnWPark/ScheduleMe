@@ -9,12 +9,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/journal/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 
-  <!-- JS -->
-  <!-- load Angular, Firebase, Firebase Angular Library, and custom app.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.0.1/angularfire.min.js"></script>
-  <script src="app.js"></script>
 </head>
 <body>
 <div class="container" ng-app="scheduleApp" ng-controller="mainController">
@@ -40,5 +34,26 @@
     </p>
 
 </div>
+
+<!-- JS -->
+<!-- load Angular, Firebase, Firebase Angular Library, and custom app.js -->
+<!-- changes to firebase SDK from 3.x -->
+<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDQGtt1xfLKXE35UdBl4hrFffukBlF_80Q",
+    authDomain: "scheduleme-8463d.firebaseapp.com",
+    databaseURL: "https://scheduleme-8463d.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+  var rootRef = firebase.database().ref();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.0.1/angularfire.min.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
