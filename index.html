@@ -17,7 +17,28 @@
   <script src="app.js"></script>
 </head>
 <body>
+<div class="container" ng-app="scheduleApp" ng-controller="mainController">
+  <div class="page-header text-center">
+    <h1>Schedule.me</h1>
+  </div>
+  <div class="row times">
+    <div class="col-xs-4 text-center">
 
-  
+      <h2>Monday</h2>
+
+      <div class="time-slot">
+        <input type="checkbox" id="monday-time">
+        <!-- Hiding the input box and using the label as the clickable item.  In order to work the 'label' needs a 'for' attribute that points to the 'id' of the 'input' -->
+        <label for="monday-time">9:00 a.m.</label>
+      </div>
+    </div>
+
+  </div>
+
+    <p class="text-center">
+      <a href="#" class="btn btn-primary">Reset</a>
+    </p>
+
+</div>
 </body>
 </html>
